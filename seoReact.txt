@@ -1,0 +1,58 @@
+Use Next.js
+===========
+
+Use status codes correctly
+==========================
+- Use the React Router framework.
+- Create a 404 component that shows when a route isn’t recognized.
+- Add a noindex tag to “not found” pages.
+- Add a <h1> with a message like “404: Page Not Found.” This isn’t ideal, 
+  as we don’t report a 404 status code. But it will prevent Google from 
+  indexing the page and help it recognize the page as a soft 404
+
+
+Avoid hashed URLs
+=================
+like 
+https://reactspa.com/#/shop
+https://reactspa.com/#/about
+Google isn’t going to see anything after the hash. All of these pages will be seen as 
+https://reactspa.com/.
+routing should implement the History API to change pages.
+
+Use <a href> links where relevant
+=================================
+A common mistake with SPAs is using a <div> or a <button> to change the URL. 
+This isn’t an issue with React itself, but how the library is used.
+
+React.Lazy
+=================================
+Implementing lazyload will help users explore the websites faster and create a 
+positive impact on our page speed score in Google.
+
+URL Case
+========
+Google considers certain pages as separate pages when URLs contain lower or uppercase.
+For example:
+/vendi
+/Vendi
+These two URLs will be considered as two separate and individual pages by Google
+
+
+React Helmet
+============
+One important component of SEO is Metadata. Thus, it should pop up on source code 
+even when React is used. Keeping the description and title in the same structure 
+might not be helpful enough in CTR and other scales of SEO.
+
+
+Other SEO Considerations
+=======================
+- Use a CDN to serve each static asset such as JS, CSS, Fonts, etc., 
+  and use responsive images to lower the loading times.
+
+- Improving the robots.txt file can assist search bots in analyzing how to crawl on your website.
+
+- Page Metadata
+
+- User Experience and Loading Time
